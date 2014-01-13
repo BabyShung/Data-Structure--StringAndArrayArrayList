@@ -1,3 +1,4 @@
+import applications.checkPermutationOrNot;
 import ArrayList.ArrayBasedArrayList;
 
 public class Test {
@@ -22,13 +23,18 @@ public class Test {
 //			System.out.print(tmp[i]);
 //		}
 
-		ArrayBasedArrayList<Object> abal = new ArrayBasedArrayList<Object>();
-		abal.add(2);
-		abal.add(3);
-		abal.add(5);
-		for(int i=0;i<abal.size();i++){
-			System.out.println(abal.get(i)+" ");
-		}
+//		ArrayBasedArrayList<Object> abal = new ArrayBasedArrayList<Object>();
+//		abal.add(2);
+//		abal.add(3);
+//		abal.add(5);
+//		for(int i=0;i<abal.size();i++){
+//			System.out.println(abal.get(i)+" ");
+//		}
+		
+		checkPermutationOrNot cpon = new checkPermutationOrNot();
+		System.out.println(cpon.checkPermutation("abcd", "badc"));
+		System.out.println(cpon.checkPermutation2("abcd", "dcab"));
+		
 		
 		
 	}
