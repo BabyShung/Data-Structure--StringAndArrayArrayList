@@ -1,5 +1,6 @@
+import applications.Rotated_SortedArray;
+import applications.Rotated_isSubstring;
 import applications.checkPermutationOrNot;
-import ArrayList.ArrayBasedArrayList;
 
 public class Test {
 
@@ -31,10 +32,18 @@ public class Test {
 //			System.out.println(abal.get(i)+" ");
 //		}
 		
-		checkPermutationOrNot cpon = new checkPermutationOrNot();
-		System.out.println(cpon.checkPermutation("abcd", "badc"));
-		System.out.println(cpon.checkPermutation2("abcd", "dcab"));
+//		int arr[] = {4,5,6,7,8,9,10,11,1,2,3};
+//		Rotated_SortedArray rsa = new Rotated_SortedArray(arr);
+//		rsa.getMin(0, arr.length-1);
+
+	
+//		checkPermutationOrNot cpon = new checkPermutationOrNot();
+//		System.out.println(cpon.checkPermutation("abcd", "badc"));
+//		System.out.println(cpon.checkPermutation2("abcd", "dcab"));
 		
+		
+		Rotated_isSubstring riss = new Rotated_isSubstring();
+		System.out.println(riss.checkIsSubstring("water", "erwat"));
 		
 		
 	}
