@@ -1,6 +1,5 @@
-import applications.Rotated_SortedArray;
-import applications.Rotated_isSubstring;
-import applications.checkPermutationOrNot;
+import applications.checkStringUniqueCharacter;
+
 
 public class Test {
 
@@ -42,9 +41,13 @@ public class Test {
 //		System.out.println(cpon.checkPermutation2("abcd", "dcab"));
 		
 		
-		Rotated_isSubstring riss = new Rotated_isSubstring();
-		System.out.println(riss.checkIsSubstring("water", "erwat"));
+//		Rotated_isSubstring riss = new Rotated_isSubstring();
+//		System.out.println(riss.checkIsSubstring("water", "erwat"));
 		
+		
+		checkStringUniqueCharacter csuc = new checkStringUniqueCharacter();
+		System.out.println(csuc.checkingStringUniqueCharacter("afwqrcg"));
+		System.out.println(csuc.checkingStringUniqueCharacter2("asfewq"));
 		
 	}
 
