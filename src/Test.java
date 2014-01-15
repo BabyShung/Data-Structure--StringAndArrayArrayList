@@ -1,3 +1,4 @@
+import applications.ReverseString;
 import applications.checkStringUniqueCharacter;
 
 
@@ -45,10 +46,15 @@ public class Test {
 //		System.out.println(riss.checkIsSubstring("water", "erwat"));
 		
 		
-		checkStringUniqueCharacter csuc = new checkStringUniqueCharacter();
-		System.out.println(csuc.checkingStringUniqueCharacter("afwqrcg"));
-		System.out.println(csuc.checkingStringUniqueCharacter2("asfewq"));
+//		checkStringUniqueCharacter csuc = new checkStringUniqueCharacter();
+//		System.out.println(csuc.checkingStringUniqueCharacter("afwqrcg"));
+//		System.out.println(csuc.checkingStringUniqueCharacter2("asfewq"));
 		
+		ReverseString rs = new ReverseString();
+		System.out.println("reversed: "+rs.reverse_String("abcdef"));
+		System.out.println("reversed: "+rs.reverse_String_recursion("abcdef"));
+		System.out.println("reversed: "+rs.reverse_String_stack("abcdef"));
+		System.out.println("reversed: "+rs.reverse_String_stack2("abcdef"));
 	}
 
 }
