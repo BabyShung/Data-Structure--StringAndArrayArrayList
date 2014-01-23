@@ -1,5 +1,5 @@
+import applications.RansomNote;
 import applications.ReverseString;
-import applications.checkStringUniqueCharacter;
 
 
 public class Test {
@@ -49,6 +49,11 @@ public class Test {
 //		checkStringUniqueCharacter csuc = new checkStringUniqueCharacter();
 //		System.out.println(csuc.checkingStringUniqueCharacter("afwqrcg"));
 //		System.out.println(csuc.checkingStringUniqueCharacter2("asfewq"));
+		
+		
+//		RansomNote rn = new RansomNote();
+//		boolean result = rn.checkRansomNote("I am a MCS student I I");
+//		System.out.println("result: " + result);
 		
 		ReverseString rs = new ReverseString();
 		System.out.println("reversed: "+rs.reverse_String("abcdef"));
