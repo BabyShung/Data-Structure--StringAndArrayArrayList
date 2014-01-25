@@ -1,5 +1,4 @@
-import applications.Permutation;
-import applications.ReverseString;
+import applications.Combination;
 
 
 public class Test {
@@ -55,14 +54,19 @@ public class Test {
 //		boolean result = rn.checkRansomNote("I am a MCS student I I");
 //		System.out.println("result: " + result);
 		
-		ReverseString rs = new ReverseString();
-		System.out.println("reversed: "+rs.reverse_String("abcdef"));
-		System.out.println("reversed: "+rs.reverse_String_recursion("abcdef"));
-		System.out.println("reversed: "+rs.reverse_String_stack("abcdef"));
-		System.out.println("reversed: "+rs.reverse_String_stack2("abcdef"));
+//		ReverseString rs = new ReverseString();
+//		System.out.println("reversed: "+rs.reverse_String("abcdef"));
+//		System.out.println("reversed: "+rs.reverse_String_recursion("abcdef"));
+//		System.out.println("reversed: "+rs.reverse_String_stack("abcdef"));
+//		System.out.println("reversed: "+rs.reverse_String_stack2("abcdef"));
 		
-		Permutation pm = new Permutation();
-		pm.permutation("abcd");
+//		Permutation pm = new Permutation();
+//		pm.permutation("abcd");
+		
+		Combination cc = new Combination();
+		cc.combination("abcd");
+		System.out.println("---------");
+		cc.combination2("abcd");
 	}
 
 }
