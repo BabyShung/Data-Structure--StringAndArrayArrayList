@@ -1,4 +1,4 @@
-import applications.RansomNote;
+import applications.Permutation;
 import applications.ReverseString;
 
 
@@ -60,6 +60,9 @@ public class Test {
 		System.out.println("reversed: "+rs.reverse_String_recursion("abcdef"));
 		System.out.println("reversed: "+rs.reverse_String_stack("abcdef"));
 		System.out.println("reversed: "+rs.reverse_String_stack2("abcdef"));
+		
+		Permutation pm = new Permutation();
+		pm.permutation("abcd");
 	}
 
 }
