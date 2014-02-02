@@ -54,7 +54,7 @@ public class ReverseString {
 		}
 	}
 
-	// stack
+	// stack+stringbuilder
 	public String reverse_String_stack(String a) {
 
 		if (!validLength(a.length()))
@@ -72,7 +72,7 @@ public class ReverseString {
 
 	}
 
-	// stack
+	// stack+array
 	public String reverse_String_stack2(String a) {
 
 		if (!validLength(a.length()))
@@ -90,6 +90,11 @@ public class ReverseString {
 		return new String(tmp);
 	}
 
+		
+	
+	
+	
+	
 	/**
 	 * shared methods
 	 */
