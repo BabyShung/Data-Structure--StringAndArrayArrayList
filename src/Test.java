@@ -1,3 +1,4 @@
+import CircularArray.CircularArray;
 import applications.Combination;
 
 
@@ -67,6 +68,26 @@ public class Test {
 		cc.combination("abcd");
 		System.out.println("---------");
 		cc.combination2("abcd");
+		
+		String a = "Acd ;'[]sdfc.';f9 98 7d3";
+		a = a.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+		System.out.println(a);
+		
+		
+		CircularArray<Integer> cca = new CircularArray<>(5);
+		cca.set(0, 1);
+		cca.set(1, 2);
+		cca.set(2, 3);
+		cca.set(3, 4);
+		cca.set(4, 5);
+		cca.rotate(2);
+		for(Integer tmp : cca){
+			System.out.print(tmp+" ");
+		}
+		System.out.println();
+		
+		
+		
 	}
 
 }
