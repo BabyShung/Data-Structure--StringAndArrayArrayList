@@ -92,8 +92,14 @@ public class Test {
 		
 		int[] rfa1 = {3,2,5,6,3,4,1,3,7,3};	//length 10
 		System.out.println(rfa.removeElement(rfa1, 3));
-		
-		
+		int[] rfa2 = {2,2,3,3,3,3,4,4,4,5};	//length 10
+		System.out.println(rfa.removeDuplicateElement(rfa2));
+		int[] rfa3 = {2,2,3,3,3,3,4,4,4,5};	//length 10
+		int newLength3 = rfa.removeDuplicateElement2(rfa3);
+		System.out.println(newLength3);
+		for(int i=0;i<newLength3;i++)
+			System.out.print(rfa3[i]+" ");
+		System.out.println();
 		
 		
 	}
