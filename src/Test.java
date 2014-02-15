@@ -1,5 +1,6 @@
 import CircularArray.CircularArray;
 import applications.Combination;
+import applications.RemoveFromArray;
 
 
 public class Test {
@@ -85,6 +86,13 @@ public class Test {
 			System.out.print(tmp+" ");
 		}
 		System.out.println();
+		
+		
+		RemoveFromArray rfa = new RemoveFromArray();
+		
+		int[] rfa1 = {3,2,5,6,3,4,1,3,7,3};	//length 10
+		System.out.println(rfa.removeElement(rfa1, 3));
+		
 		
 		
 		
