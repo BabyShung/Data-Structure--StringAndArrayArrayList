@@ -1,5 +1,6 @@
 import CircularArray.CircularArray;
 import applications.Combination;
+import applications.FindFirstNonrepeatedChar;
 import applications.RemoveFromArray;
 
 
@@ -101,6 +102,10 @@ public class Test {
 			System.out.print(rfa3[i]+" ");
 		System.out.println();
 		
+		
+		FindFirstNonrepeatedChar ffnr = new FindFirstNonrepeatedChar();
+		Character c = ffnr.firstNonrepeated("fmqiweomfq");
+		System.out.println("firstnonrepeated: "+ c);
 		
 	}
 
