@@ -104,7 +104,7 @@ public class Test {
 		
 		
 		FindFirstNonrepeatedChar ffnr = new FindFirstNonrepeatedChar();
-		Character c = ffnr.firstNonrepeated("fmqiweomfq");
+		String c = ffnr.firstNonrepeated("fmqweomfq");
 		System.out.println("firstnonrepeated: "+ c);
 		
 	}

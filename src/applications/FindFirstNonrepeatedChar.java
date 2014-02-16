@@ -12,6 +12,38 @@ import java.util.HashMap;
 
 public class FindFirstNonrepeatedChar {
 
+	//best dealing with Unicode 2-byte character
+	public String firstNonrepeated(String str) {
+
+		HashMap<Integer, Object> hm = new HashMap<>();
+		Object once = new Object();
+		Object multi = new Object();
+		Object seen;
+
+		int length = str.length();
+		for (int i = 0; i < length;) {
+			final int cp = str.codePointAt(i);
+			i += Character.charCount(cp);// if single byte, i++,if 2-byte, i+=2
+			seen = hm.get(cp);
+
+			if (seen == null)	//deal with autoboxing
+				hm.put(cp, once);
+			else if (seen == once)
+				hm.put(cp, multi);
+		}
+
+		for (int j = 0; j < length;) {
+			final int cp = str.codePointAt(j);
+			j += Character.charCount(cp);
+			
+			if (hm.get(cp) == once)
+				return new String(Character.toChars(cp));
+			// why a string? since a char might not represent a 2-byte unicode
+			// element
+		}
+		return null;
+	}
+
 	/**
 	 * Two major flaws:
 	 * 
@@ -23,7 +55,7 @@ public class FindFirstNonrepeatedChar {
 	 * incremented value is created.
 	 * 
 	 */
-	public Character firstNonrepeated(String str) {
+	public Character firstNonrepeated2(String str) {
 
 		HashMap<Character, Integer> hm = new HashMap<>();
 		int length = str.length();
