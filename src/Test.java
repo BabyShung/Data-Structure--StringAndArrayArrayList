@@ -2,6 +2,7 @@ import CircularArray.CircularArray;
 import applications.Combination;
 import applications.FindFirstNonrepeatedChar;
 import applications.RemoveFromArray;
+import applications.reverseWords;
 
 
 public class Test {
@@ -107,6 +108,9 @@ public class Test {
 		String c = ffnr.firstNonrepeated("fmqweomfq");
 		System.out.println("firstnonrepeated: "+ c);
 		
+		reverseWords rw = new reverseWords();
+		String rwresult = rw.reverseWordsInPlace("Bang! dare you try me a little.");
+		System.out.println(rwresult);
 	}
 
 }
