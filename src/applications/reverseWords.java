@@ -36,10 +36,9 @@ public class reverseWords {
 				last = i;
 				while (i < a.length && a[i] != ' ')
 					i++;
-				i--;
-				reverse(a, last, i);
-			}
-			i++;
+				reverse(a, last, i - 1);
+			} else
+				i++;
 		}
 		return new String(a);
 	}
@@ -50,10 +49,60 @@ public class reverseWords {
 		}
 	}
 
+	// private String reverse(String str) {
+	// char[] a = str.toCharArray();
+	// for (int i = 0; i < a.length / 2; i++) {
+	// swap(a, i, a.length - 1 - i);
+	// }
+	// return new String(a);
+	// }
+
 	private void swap(char[] a, int i, int j) {
 
 		char tmp = a[i];
 		a[i] = a[j];
 		a[j] = tmp;
+	}
+
+	/**
+	 * not in place
+	 */
+	public String reverseWordsNotInPlace(String str) {
+
+		StringBuilder sb = new StringBuilder();
+		String[] words = str.split(" ");
+		for (int i = words.length - 1; i >= 0; i--) {
+			sb.append(words[i]).append(" ");
+		}
+		return sb.toString();
+	}
+
+	// this one should be the fastest, just one time O(n)
+	//this is because using additional space can decrease running time
+	public String reverseWordsNotInPlace2(String str) {
+
+		char[] a = str.toCharArray();
+		char[] buffer = new char[a.length];
+
+		int current = 0;
+		int last;
+		for (int i = a.length - 1; i >= 0; i--) {
+			if (a[i] != ' ') {
+				last = i;
+
+				while (i >= 0 && a[i] != ' ')
+					i--;
+
+				// copy
+				for (int j = i + 1; j <= last; j++) {
+					buffer[current++] = a[j];
+				}
+				// append space
+				if (current < a.length)
+					buffer[current++] = ' ';
+			} else
+				i--;
+		}
+		return new String(buffer);
 	}
 }

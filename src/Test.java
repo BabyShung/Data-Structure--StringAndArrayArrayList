@@ -111,6 +111,10 @@ public class Test {
 		reverseWords rw = new reverseWords();
 		String rwresult = rw.reverseWordsInPlace("Bang! dare you try me a little.");
 		System.out.println(rwresult);
+		String rwresult2 = rw.reverseWordsNotInPlace("Bang! dare you try me a little.");
+		System.out.println(rwresult2);
+		String rwresult3 = rw.reverseWordsNotInPlace2("Bang! dare you try me a little.");
+		System.out.println(rwresult3);
 	}
 
 }
