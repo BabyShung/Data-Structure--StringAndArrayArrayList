@@ -33,10 +33,10 @@ public class CircularArray<T> implements Iterable<T> {
 
 	@Override
 	public Iterator<T> iterator() {
-		return new CircularArrayIterator<T>(this);
+		return new CircularArrayIterator(this);
 	}
 
-	private class CircularArrayIterator<T> implements Iterator<T> {
+	private class CircularArrayIterator implements Iterator<T> {
 
 		private int current;
 		private T[] items;
