@@ -1,8 +1,14 @@
 package applications;
 
+/**
+ * O(n^2)
+ * 
+ * @author haozheng
+ *
+ */
+
 public class Combination {
-	
-	
+
 	public void combination(String s) {
 		combination("", s);
 	}
@@ -25,17 +31,13 @@ public class Combination {
 		System.out.println(prefix);
 		for (int i = 0; i < s.length(); i++)
 			combination2(prefix + s.charAt(i), s.substring(i + 1));
-		
+
 		/**
-		 * traditional calculating:
-		 * C1,4 + C2,4 + C3,4 + C4,4
+		 * traditional calculating: C1,4 + C2,4 + C3,4 + C4,4
 		 * 
 		 * recursive way:
 		 * 
-		 * comb(a,bcd)	
-		 * comb(b,cd)
-		 * comb(c,d)
-		 * comb(d,"")
+		 * comb(a,bcd) comb(b,cd) comb(c,d) comb(d,"")
 		 * 
 		 */
 	}

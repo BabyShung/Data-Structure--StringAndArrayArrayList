@@ -34,8 +34,7 @@ public class checkStringUniqueCharacter {
 		}
 		return true;
 	}
-	
-	
+		
 	//using bit manipulation, but assuming string are only 'a' - 'z' 
 	//since int has only 32bits, and lowercase alphabatics is 26
 	
