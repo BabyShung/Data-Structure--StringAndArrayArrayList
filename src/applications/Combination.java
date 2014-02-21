@@ -1,10 +1,10 @@
 package applications;
 
 /**
- * O(n^2)
+ * 
  * 
  * @author haozheng
- *
+ * 
  */
 
 public class Combination {
@@ -41,4 +41,24 @@ public class Combination {
 		 * 
 		 */
 	}
+
+	
+	//from pie
+	public void combination3(String s) {
+		StringBuilder sb = new StringBuilder();
+		combination3(0, s, sb);
+	}
+
+	private void combination3(int start, String s, StringBuilder sb) {
+		for (int i = start; i < s.length() - 1; i++) {
+			sb.append(s.charAt(i));
+			System.out.println(sb);
+			combination3(i + 1, s, sb);
+			sb.setLength(sb.length() - 1);
+		}
+		sb.append(s.charAt(s.length() - 1));
+		System.out.println(sb);
+		sb.setLength(sb.length() - 1);
+	}
+
 }

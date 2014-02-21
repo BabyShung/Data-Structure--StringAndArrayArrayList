@@ -2,6 +2,7 @@ import CircularArray.CircularArray;
 import applications.Combination;
 import applications.FindFirstNonrepeatedChar;
 import applications.IntegerStringConversion;
+import applications.Permutation;
 import applications.RemoveFromArray;
 import applications.reverseWords;
 
@@ -60,14 +61,19 @@ public class Test {
 		// System.out.println("reversed: "+rs.reverse_String_stack("abcdef"));
 		// System.out.println("reversed: "+rs.reverse_String_stack2("abcdef"));
 
-		// Permutation pm = new Permutation();
-		// pm.permutation("abcd");
-
-		Combination cc = new Combination();
-		cc.combination("abcd");
+		Permutation pm = new Permutation();
+		pm.permutation("abc");
 		System.out.println("---------");
-		cc.combination2("abcd");
-
+		pm.permutation2("abc");
+		System.out.println("---------");
+		System.out.println("----combination-----");
+		Combination cc = new Combination();
+		cc.combination("abc");
+		System.out.println("---------");
+		cc.combination2("abc");
+		System.out.println("---------");
+		cc.combination3("abc");
+		System.out.println("---------");
 		String a = "Acd ;'[]sdfc.';f9 98 7d3";
 		a = a.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 		System.out.println(a);
