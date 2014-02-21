@@ -122,7 +122,8 @@ public class Test {
 		System.out.println(iscr);
 		int iscr2 = isc.StringToInteger2("-3425");
 		System.out.println(iscr2);
-		
+		String iscr3 = isc.IntegerToString(-3425);
+		System.out.println(iscr3);
 	}
 
 }
