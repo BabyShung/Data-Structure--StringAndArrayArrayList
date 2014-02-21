@@ -1,6 +1,7 @@
 import CircularArray.CircularArray;
 import applications.Combination;
 import applications.FindFirstNonrepeatedChar;
+import applications.IntegerStringConversion;
 import applications.RemoveFromArray;
 import applications.reverseWords;
 
@@ -115,6 +116,13 @@ public class Test {
 		System.out.println(rwresult2);
 		String rwresult3 = rw.reverseWordsNotInPlace2("Bang! dare you try me a little.");
 		System.out.println(rwresult3);
+		
+		IntegerStringConversion isc = new IntegerStringConversion();
+		int iscr = isc.StringToInteger("-3425");
+		System.out.println(iscr);
+		int iscr2 = isc.StringToInteger2("-3425");
+		System.out.println(iscr2);
+		
 	}
 
 }
