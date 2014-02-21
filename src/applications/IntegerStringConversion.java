@@ -1,8 +1,17 @@
 package applications;
 
+/**
+ * classic conversion int to string and string to int
+ * 
+ * several solutions for each, notice the space complexity
+ * 
+ * @author haozheng
+ * 
+ */
+
 public class IntegerStringConversion {
 
-	public int StringToInteger(String s) {
+	public int StringToInteger(String s) { //O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
 		if (s.charAt(i) == '-') {
@@ -20,7 +29,7 @@ public class IntegerStringConversion {
 		return negative ? result * -1 : result;
 	}
 
-	public int StringToInteger2(String s) {
+	public int StringToInteger2(String s) { //O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
 		if (s.charAt(i) == '-') {
@@ -37,7 +46,7 @@ public class IntegerStringConversion {
 		return negative ? result * -1 : result;
 	}
 
-	public String IntegerToString(int num) {	//O(n) time and O(1) space
+	public String IntegerToString(int num) { // O(n) time and O(1) space
 
 		StringBuilder sb = new StringBuilder();
 		if (num < 0) {
@@ -59,6 +68,32 @@ public class IntegerStringConversion {
 		return sb.toString();
 	}
 
-	
-	
+	/**
+	 * uses a char array, first put all the last digit in the array
+	 * incrementally, then append from the last one in the array. It is like
+	 * using a stack
+	 */
+	public String IntegerToString2(int num) { // O(n) time and O(n) space
+
+		int i = 0;
+		boolean negative = false;
+
+		char[] tmp = new char[10];// normal int won't exceed
+		if (num < 0) {
+			negative = true;
+			num = -num;
+		}
+		do {
+			tmp[i++] = (char) (num % 10 + '0');
+			num /= 10;
+		} while (num != 0);
+
+		StringBuilder sb = new StringBuilder();
+		if (negative)
+			sb.append('-');
+		while (i > 0)
+			sb.append(tmp[--i]);
+		return sb.toString();
+	}
+
 }
