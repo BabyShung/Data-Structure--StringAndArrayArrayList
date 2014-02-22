@@ -1,7 +1,12 @@
 package applications;
 
 /**
+ * show all the combinations of a string
  * 
+ * 3 solutions
+ * 
+ * what is the running time of it?
+ * O(2^n) or O(n!) ?
  * 
  * @author haozheng
  * 
