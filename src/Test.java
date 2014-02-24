@@ -4,6 +4,7 @@ import applications.FindFirstNonrepeatedChar;
 import applications.IntegerStringConversion;
 import applications.Permutation;
 import applications.RemoveFromArray;
+import applications.findMostBeautifulUniqueString;
 import applications.reverseWords;
 
 public class Test {
@@ -127,6 +128,10 @@ public class Test {
 		System.out.println(iscr3);
 		String iscr4 = isc.IntegerToString2(-3425);
 		System.out.println(iscr4);
+		
+		findMostBeautifulUniqueString fmsus = new findMostBeautifulUniqueString();
+		System.out.println(fmsus.findBeautifulUniqueString("nlhthgrfdnnlprjtecpdrthigjoqdejsfkasoctjijaoebqlrgaiakfsbljmpibkidjsrtkgrdnqsknbarpabgokbsrfhmeklrle"));
+		
 	}
 
 }

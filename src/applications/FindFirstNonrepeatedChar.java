@@ -30,6 +30,7 @@ public class FindFirstNonrepeatedChar {
 				hm.put(cp, once);
 			else if (seen == once)
 				hm.put(cp, multi);
+
 		}
 
 		for (int j = 0; j < length;) {
