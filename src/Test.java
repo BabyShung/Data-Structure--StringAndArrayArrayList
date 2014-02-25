@@ -124,10 +124,12 @@ public class Test {
 		System.out.println(iscr);
 		int iscr2 = isc.StringToInteger2("-3425");
 		System.out.println(iscr2);
-		String iscr3 = isc.IntegerToString(-3425);
+		int iscr3 = isc.atoi("    010aa22");
 		System.out.println(iscr3);
-		String iscr4 = isc.IntegerToString2(-3425);
+		String iscr4 = isc.IntegerToString(-3425);
 		System.out.println(iscr4);
+		String iscr5 = isc.IntegerToString2(-3425);
+		System.out.println(iscr5);
 		
 		findMostBeautifulUniqueString fmsus = new findMostBeautifulUniqueString();
 		System.out.println(fmsus.findBeautifulUniqueString("nlhthgrfdnnlprjtecpdrthigjoqdejsfkasoctjijaoebqlrgaiakfsbljmpibkidjsrtkgrdnqsknbarpabgokbsrfhmeklrle"));

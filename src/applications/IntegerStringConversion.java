@@ -11,7 +11,91 @@ package applications;
 
 public class IntegerStringConversion {
 
-	public int StringToInteger(String s) { //O(n) time and O(1) space
+	public int atoi(String str) {// string to int
+
+		/**
+		 * Consider:
+		 * 
+		 * 1. null or empty string 2. white spaces 3. +/- sign 4. calculate real
+		 * value 5. handle min & max
+		 * 
+		 */
+
+		if (str == null || str.length() < 1)
+			return 0;
+
+		str = str.trim();
+		boolean negative = false;
+		int i = 0;
+		if (str.charAt(i) == '-') {
+			negative = true;
+			i++;
+		} else if (str.charAt(i) == '+') {
+			i++;
+		}
+
+		double num = 0;
+		int value;
+		for (; i < str.length(); i++) {
+			value = str.charAt(i);
+			if (value <= '9' && value >= '0')
+				num = num * 10 + (value - '0');
+			else
+				break;
+		}
+
+		if (negative)
+			num *= -1;
+
+		if (num > Integer.MAX_VALUE)
+			return Integer.MAX_VALUE;
+
+		if (num < Integer.MIN_VALUE)
+			return Integer.MIN_VALUE;
+
+		return (int) num;
+	}
+
+	public int atoi2(String str) {
+		if (str == null || str.length() < 1)
+			return 0;
+
+		// trim white spaces
+		str = str.trim();
+
+		char flag = '+';
+
+		// check negative or positive
+		int i = 0;
+		if (str.charAt(0) == '-') {
+			flag = '-';
+			i++;
+		} else if (str.charAt(0) == '+') {
+			i++;
+		}
+		// use double to store result
+		double result = 0;
+
+		// calculate value
+		while (str.length() > i && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+			result = result * 10 + (str.charAt(i) - '0');
+			i++;
+		}
+
+		if (flag == '-')
+			result = -result;
+
+		// handle max and min
+		if (result > Integer.MAX_VALUE)
+			return Integer.MAX_VALUE;
+
+		if (result < Integer.MIN_VALUE)
+			return Integer.MIN_VALUE;
+
+		return (int) result;
+	}
+
+	public int StringToInteger(String s) { // O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
 		if (s.charAt(i) == '-') {
@@ -29,7 +113,7 @@ public class IntegerStringConversion {
 		return negative ? result * -1 : result;
 	}
 
-	public int StringToInteger2(String s) { //O(n) time and O(1) space
+	public int StringToInteger2(String s) { // O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
 		if (s.charAt(i) == '-') {
