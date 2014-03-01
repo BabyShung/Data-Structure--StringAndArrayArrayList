@@ -30,7 +30,7 @@ public class RemoveFromArray {
 
 	}
 	
-	public int removeDuplicateElement(int[] a) {
+	public int removeDuplicateElement(int[] a) {//from sorted array
 
 		int count = 0;
 		for (int i = 1; i < a.length; i++) {

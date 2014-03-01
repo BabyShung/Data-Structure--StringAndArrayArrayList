@@ -16,8 +16,15 @@ public class IntegerStringConversion {
 		/**
 		 * Consider:
 		 * 
-		 * 1. null or empty string 2. white spaces 3. +/- sign 4. calculate real
-		 * value 5. handle min & max
+		 * 1. null or empty string
+		 * 
+		 * 2. white spaces
+		 * 
+		 * 3. +/- sign
+		 * 
+		 * 4. calculate real value
+		 * 
+		 * 5. handle min & max, might overflow
 		 * 
 		 */
 
@@ -56,7 +63,7 @@ public class IntegerStringConversion {
 		return (int) num;
 	}
 
-	public int atoi2(String str) {// string to int
+	public int atoi2(String str) {// string to int, not mine from niubility
 		if (str == null || str.length() < 1)
 			return 0;
 
@@ -95,6 +102,7 @@ public class IntegerStringConversion {
 		return (int) result;
 	}
 
+	// naive, but simple
 	public int StringToInteger(String s) { // O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
@@ -113,6 +121,7 @@ public class IntegerStringConversion {
 		return negative ? result * -1 : result;
 	}
 
+	// naive, but simple
 	public int StringToInteger2(String s) { // O(n) time and O(1) space
 		boolean negative = false;
 		int i = 0;
@@ -130,6 +139,10 @@ public class IntegerStringConversion {
 		return negative ? result * -1 : result;
 	}
 
+	/**
+	 * int to string, it is math !!!
+	 */
+
 	public String IntegerToString(int num) { // O(n) time and O(1) space
 
 		StringBuilder sb = new StringBuilder();
@@ -144,7 +157,7 @@ public class IntegerStringConversion {
 		}
 		while (divisor != 0) {
 			int leftDigit = num / divisor;
-			char strD = (char) (leftDigit + '0');
+			char strD = (char) (leftDigit + '0');// important,convert
 			sb.append(strD);
 			num = num % divisor;
 			divisor /= 10;

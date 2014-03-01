@@ -9,11 +9,7 @@ package applications;
  */
 
 public class CompressedString {
-
-	public CompressedString() {
-
-	}
-
+	
 	public String compressString(String input) {
 
 		int inputSize = input.length();

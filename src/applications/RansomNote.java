@@ -5,23 +5,22 @@ import java.util.Map;
 
 public class RansomNote {
 
-	private Map<String, Integer> wordsMap;
-
 	private String magazine = "Hello I am a MCS student I come from China"
 			+ " and I love computer science My MCS friends here are very friendly";
 
-	public RansomNote() {
-
-		wordsMap = new HashMap<String, Integer>();
-
-		init();
-
-		// print();
-	}
-
 	public boolean checkRansomNote(String sentence) {
 
-		String[] words = sentence.split(" ");
+		Map<String, Integer> wordsMap = new HashMap<String, Integer>();
+
+		String[] words = magazine.split(" ");
+		for (String word : words) {
+
+			if (wordsMap.containsKey(word))
+				wordsMap.put(word, 1);
+			else
+				wordsMap.put(word, wordsMap.get(word) + 1);
+		}
+
 		Integer count;
 		for (String word : words) {
 
@@ -32,24 +31,11 @@ public class RansomNote {
 				wordsMap.put(word, count - 1);
 			}
 		}
-		print();
+		print(wordsMap);
 		return true;
 	}
 
-	private void init() {
-		String[] words = magazine.split(" ");
-		Integer value;
-		for (String word : words) {
-
-			value = wordsMap.get(word);
-			if (value == null)
-				wordsMap.put(word, 1);
-			else
-				wordsMap.put(word, value + 1);
-		}
-	}
-
-	private void print() {
+	private void print(Map<String, Integer> wordsMap) {
 		System.out.println("------");
 		for (Integer tmp : wordsMap.values()) {
 			System.out.println(tmp);

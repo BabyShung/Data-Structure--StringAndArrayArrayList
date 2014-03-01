@@ -6,6 +6,7 @@ import applications.Permutation;
 import applications.RemoveFromArray;
 import applications.checkPermutationOrNot;
 import applications.findMostBeautifulUniqueString;
+import applications.removeSpecifiedChars;
 import applications.reverseWords;
 
 public class Test {
@@ -135,6 +136,10 @@ public class Test {
 		
 		findMostBeautifulUniqueString fmsus = new findMostBeautifulUniqueString();
 		System.out.println(fmsus.findBeautifulUniqueString("nlhthgrfdnnlprjtecpdrthigjoqdejsfkasoctjijaoebqlrgaiakfsbljmpibkidjsrtkgrdnqsknbarpabgokbsrfhmeklrle"));
+		
+		removeSpecifiedChars rsc = new removeSpecifiedChars();
+		System.out.println(rsc.removeChars("aabbcdfeg", "ade"));
+		
 		
 	}
 
