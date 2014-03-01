@@ -4,9 +4,14 @@ package applications;
  * Question:
  * Given two strings, check if one is a permutation of the other
  * 
- * 3 solutions
+ * 4 solutions
  * 
- * unimplemented: sort both a and b, and compare corresponding char --O(nlogn)
+ * 1.hashmap, store one string, for the other string, minus the value, finally check if value >0 or not
+ * 2.use 256 array, same as first one 
+ * 3.calculate the total value of both two, and compare   O(1) space
+ * 
+ * unimplemented:
+ * 4.sort both a and b, and compare corresponding char --O(nlogn)
  * 
  */
 
@@ -14,7 +19,7 @@ import java.util.HashMap;
 
 public class checkPermutationOrNot {
 
-	public boolean checkPermutation(String a, String b) {
+	public boolean checkPermutation(String a, String b) { // O(n) space
 
 		if (a.length() != b.length())
 			return false;
@@ -74,6 +79,22 @@ public class checkPermutationOrNot {
 		}
 
 		return true;
+	}
+
+	public boolean checkPermutation3(String a, String b) {
+
+		if (a.length() != b.length())
+			return false;
+
+		int sa = 0, sb = 0;
+		for (int i = 0; i < a.length(); i++) {
+			sa += a.charAt(i);
+			sb += b.charAt(i);
+		}
+		if (sa == sb)
+			return true;
+		else
+			return false;
 	}
 
 }

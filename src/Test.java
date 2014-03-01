@@ -4,6 +4,7 @@ import applications.FindFirstNonrepeatedChar;
 import applications.IntegerStringConversion;
 import applications.Permutation;
 import applications.RemoveFromArray;
+import applications.checkPermutationOrNot;
 import applications.findMostBeautifulUniqueString;
 import applications.reverseWords;
 
@@ -41,10 +42,11 @@ public class Test {
 		// Rotated_SortedArray rsa = new Rotated_SortedArray(arr);
 		// rsa.getMin(0, arr.length-1);
 
-		// checkPermutationOrNot cpon = new checkPermutationOrNot();
-		// System.out.println(cpon.checkPermutation("abcd", "badc"));
-		// System.out.println(cpon.checkPermutation2("abcd", "dcab"));
-
+		 checkPermutationOrNot cpon = new checkPermutationOrNot();
+		 System.out.println("cpon: "+cpon.checkPermutation("abcd", "badc"));
+		 System.out.println("cpon2: "+cpon.checkPermutation2("abcd", "dcab"));
+		 System.out.println("cpon3: "+cpon.checkPermutation3("abcd", "dcab"));
+		 
 		// Rotated_isSubstring riss = new Rotated_isSubstring();
 		// System.out.println(riss.checkIsSubstring("water", "erwat"));
 
