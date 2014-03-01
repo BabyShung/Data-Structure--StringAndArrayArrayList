@@ -56,7 +56,7 @@ public class IntegerStringConversion {
 		return (int) num;
 	}
 
-	public int atoi2(String str) {
+	public int atoi2(String str) {// string to int
 		if (str == null || str.length() < 1)
 			return 0;
 
