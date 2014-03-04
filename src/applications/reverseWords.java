@@ -11,11 +11,16 @@ package applications;
  * 
  * 2.not in-place
  * 
- * a.split b.for(int i = str.length-1; i>=0;i--), reverse current word and
- * append a space
+ * a.split----
  * 
- * a.create a same size char array. b.start from the last, scan through to the
- * first. c.if meet a space, reverse last to this space, keep on...
+ * b.for(int i = str.length-1; i>=0;i--), append the current word to
+ * stringbuilder and append a space
+ * 
+ * 3. a.create a same size char array.
+ * 
+ * b.start from the last, scan through to the first.
+ * 
+ * c.if meet a space, reverse last to this space, keep on...
  * 
  * @author haozheng
  * 
@@ -26,7 +31,7 @@ public class reverseWords {
 	public String reverseWordsInPlace(String str) {
 		char[] a = str.toCharArray();
 
-		reverse(a, 0, a.length - 1);
+		reverse(a, 0, a.length - 1);// reverse the whole
 
 		int last, i = 0;
 
@@ -65,7 +70,7 @@ public class reverseWords {
 	}
 
 	/**
-	 * not in place
+	 * not in place, if not need for space requirement, good and clean code
 	 */
 	public String reverseWordsNotInPlace(String str) {
 
@@ -78,7 +83,7 @@ public class reverseWords {
 	}
 
 	// this one should be the fastest, just one time O(n)
-	//this is because using additional space can decrease running time
+	// this is because using additional space can decrease running time
 	public String reverseWordsNotInPlace2(String str) {
 
 		char[] a = str.toCharArray();
@@ -90,7 +95,7 @@ public class reverseWords {
 			if (a[i] != ' ') {
 				last = i;
 
-				while (i >= 0 && a[i] != ' ')
+				while (i >= 0 && a[i] != ' ')//met space if is out
 					i--;
 
 				// copy
@@ -98,7 +103,7 @@ public class reverseWords {
 					buffer[current++] = a[j];
 				}
 				// append space
-				if (current < a.length)
+				if (current < a.length)//if not the last one, should append space
 					buffer[current++] = ' ';
 			} else
 				i--;

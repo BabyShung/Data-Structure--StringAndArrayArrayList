@@ -6,9 +6,9 @@ import java.util.Stack;
  * Question: Reverse a string
  * 
  * sol1: classic, convert the string to char array, swap front and rear by a for
- * loop ----O(n) time and O(n) space if input is array, then O(1) space not a
- * good idea to assign string by string, since in Java string is immutable, it
- * will copy and create a new one, wasting time and space
+ * loop ----O(n) time and O(1) space. Not a good idea to assign string by
+ * string, since in Java string is immutable, it will copy and create a new one,
+ * wasting time and space
  * 
  * sol2: recursion ----O(n) time and O(n) space recursion usually takes O(n)
  * space
@@ -90,11 +90,6 @@ public class ReverseString {
 		return new String(tmp);
 	}
 
-		
-	
-	
-	
-	
 	/**
 	 * shared methods
 	 */

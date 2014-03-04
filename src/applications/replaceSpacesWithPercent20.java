@@ -19,10 +19,10 @@ package applications;
 public class replaceSpacesWithPercent20 {
 
 	public void replaceSpaceWithPercent20(char[] arr, int origLen) {
-
+		//assume arr has enough space
 		int count = 0;
 
-		for (int i = 0; i < origLen; i++) {
+		for (int i = 0; i < origLen; i++) {//how many spaces
 			if (arr[i] == ' ')
 				count++;
 		}
