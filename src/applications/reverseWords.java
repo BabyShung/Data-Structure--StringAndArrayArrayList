@@ -86,6 +86,10 @@ public class reverseWords {
 	// this is because using additional space can decrease running time
 	public String reverseWordsNotInPlace2(String str) {
 
+		if (str == null)
+			return null;
+		str = str.trim();
+
 		char[] a = str.toCharArray();
 		char[] buffer = new char[a.length];
 
@@ -95,18 +99,20 @@ public class reverseWords {
 			if (a[i] != ' ') {
 				last = i;
 
-				while (i >= 0 && a[i] != ' ')//met space if is out
+				while (i >= 0 && a[i] != ' ')
+					// met space if is out
 					i--;
 
 				// copy
-				for (int j = i + 1; j <= last; j++) {
+				for (int j = ++i; j <= last; j++) {
 					buffer[current++] = a[j];
 				}
 				// append space
-				if (current < a.length)//if not the last one, should append space
+				if (current < a.length && i > 0)// if not the last one, should
+												// append
+					// space
 					buffer[current++] = ' ';
-			} else
-				i--;
+			}
 		}
 		return new String(buffer);
 	}

@@ -119,7 +119,7 @@ public class Test {
 				.reverseWordsNotInPlace("Bang! dare you try me a little.");
 		System.out.println(rwresult2);
 		String rwresult3 = rw
-				.reverseWordsNotInPlace2("Bang! dare you try me a little.");
+				.reverseWordsNotInPlace2("    Bang!     dare you    try me  a   little.    ");
 		System.out.println(rwresult3);
 
 		IntegerStringConversion isc = new IntegerStringConversion();
