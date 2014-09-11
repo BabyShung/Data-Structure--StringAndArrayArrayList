@@ -141,6 +141,24 @@ public class Test {
 		System.out.println(rsc.removeChars("aabbcdfeg", "ade"));
 		
 		
+		
+		//test
+		
+		
+		
+		String testString = " a   b";
+		
+		String trimmedString = testString.trim();
+		
+		String[] strs = testString.split(" ");
+		System.out.println("trimmedString: "+trimmedString);
+		System.out.println("trimmedString count: "+trimmedString.length());
+		System.out.println("split count: "+strs.length);
+		for(String tmpStr : strs){
+			System.out.println(tmpStr);
+		}
+		
+		
 	}
 
 }
