@@ -26,9 +26,11 @@ public class IntegerStringConversion {
 		 * 
 		 * 5. handle min & max, might overflow
 		 * 
+		 * 6. non-numbers, eg: +123.42ggggggkkk, return 123.42
+		 * 
 		 */
 
-		if (str == null || str.length() < 1)
+		if (str == null || str.isEmpty())
 			return 0;
 
 		str = str.trim();

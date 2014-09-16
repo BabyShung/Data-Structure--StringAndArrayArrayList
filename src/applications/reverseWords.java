@@ -28,6 +28,40 @@ package applications;
 
 public class reverseWords {
 
+	public String reverseWordsByHao(String s) {
+
+		s = s.trim();
+		if (s.isEmpty())
+			return s;
+
+		s = s.replaceAll("[ ]+", " ");
+
+		// now it is a trimmed string
+		char[] arr = s.toCharArray();
+		reverseHao(arr, 0, arr.length - 1);
+
+		int i = 0, last, len = arr.length;
+
+		while (i < len) {
+			if (arr[i] == ' ') {
+				i++;
+				continue;
+			}
+			last = i;
+			while (i < len && arr[i] != ' ') {
+				i++;
+			}
+			reverseHao(arr, last, i - 1);
+		}
+		return new String(arr);
+	}
+
+	private void reverseHao(char[] arr, int f, int r) {
+		for (int i = f; i < (f + r + 1) / 2; i++) {
+			swap(arr, i, f + r - i);
+		}
+	}
+
 	public String reverseWordsInPlace(String str) {
 		char[] a = str.toCharArray();
 
